@@ -5,7 +5,7 @@ from events.models import Event
 class Participant(models.Model):
     name = models.CharField(max_length=150)
     email = models.EmailField(unique=True)
-    events = models.ManyToManyField(Event)
+    event = models.ManyToManyField(Event)
     
     def __str__(self):
         return self.name
