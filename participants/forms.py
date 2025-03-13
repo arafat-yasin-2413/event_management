@@ -24,7 +24,7 @@ class ParticipantForm(forms.ModelForm):
                 'placeholder':'type your email',
             }),
             
-            'event': forms.Select(attrs={
+            'event': forms.CheckboxSelectMultiple(attrs={
                'class' : 'w-full p-2 rounded-md focus:outline-none border ' 
             }),
                 
