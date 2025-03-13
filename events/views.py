@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from . forms import EventForm
-
+from . models import Event
 
 # Create your views here.
 
@@ -13,4 +13,5 @@ def event_form_creating(request):
     else:
         form = EventForm()
     return render(request, 'events/event_form.html', {'form':form})
+
 
