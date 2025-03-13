@@ -58,7 +58,14 @@
 
     <ol>
         {% for cat in all_cat %}
-            <li>{{ cat.name }}</li>
+
+            <p class="h-16 mt-4">
+                <span class="font-semibold ">{{ cat.name }}</span>
+                <a class="bg-blue-600 px-2 py-1 rounded-md text-white" href="{% url 'category_update' cat.id %}" target="_blank">Edit</a>
+                <a class="bg-red-600 px-2 py-1 rounded-md text-white" href="{% url 'category_delete' cat.id %}" target="_blank">Delete</a>    
+            </p>
+
+            
         {% endfor %}
     </ol>
 </div>
