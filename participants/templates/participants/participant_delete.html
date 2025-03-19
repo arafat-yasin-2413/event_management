@@ -1,0 +1,36 @@
+{% extends 'home.html' %}
+
+
+{% block title %}
+    Delete Participant
+{% endblock title %}
+
+
+{% block content %}
+
+
+<div class="max-w-2xl mx-auto p-4 mt-2 bg-purple-200 rounded-lg shadow-md" >
+
+    <h2 class="text-2xl text-center font-semibold mb-4">
+        Delete Participant
+    </h2>
+
+
+    <p class="text-red-600 font-semibold text-2xl mb-4">
+        Do you want to delete "{{ participant.name }}"? 
+    </p>
+
+    <form method='POST'>
+        {% csrf_token %}
+
+        <button class="bg-red-400 px-4 py-1 rounded-md font-bold hover:bg-pink-600 mb-4" type="submit">Yes, delete</button>
+    </form>
+
+    <a class="bg-blue-600 px-4 py-1 rounded-md text-white" href="{% url 'participant_create' %}">Cancel</a>
+
+
+
+
+
+
+{% endblock content %}
