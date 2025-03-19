@@ -42,6 +42,24 @@
 
 
 
+{% comment %} Participants Options section {% endcomment %}
+<section class="bg-slate-300 mt-10 py-20 flex justify-center items-center gap-4">
+    
+    <a class="bg-blue-600 text-white font-semibold px-4 py-2 mt-2 rounded-md" href="{% url 'participant_create' %}">Create Participant</a>
+    <a class="bg-green-600 text-white font-semibold px-4 py-2 mt-2 rounded-md" href="{% url 'participant_show' %}">Show Participants</a>
+    
+    {% for participant in participants %}
+    
+        <a class="bg-sky-600 text-white font-semibold px-4 py-2 mt-2 rounded-md" href="{% url 'participant_update' participant.id %}">Update Participant</a>
+        <a class="bg-red-600 text-white font-semibold px-4 py-2 mt-2 rounded-md" href="{% url 'participant_delete' participant.id %}">Delete Participant</a> 
+    
+    {% endfor %}
+    
+
+</section>
+
+
+
 
 
 {% endblock content %}
